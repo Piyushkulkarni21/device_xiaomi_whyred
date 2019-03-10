@@ -94,6 +94,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_hwc_vds=1 \
+    debug.cpurend.vsync=false \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
@@ -202,7 +203,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Fix Camera for hal1 apps like whatsapp
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.hal1.packagelist=com.whatsapp
+    vendor.camera.hal1.packagelist=com.whatsapp,com.instagram.android
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -255,6 +256,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Enable manual network selection function and distinguish 2G/3G/4G
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.rat_on=combine
+
+# Make data selection stick in dual SIM devices
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.radio.aosp_usr_pref_sel=true
 
 # the level of data wiping under PRESET mode
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -328,7 +333,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Bringup properties
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.radio.atfwd.start=true
+    persist.vendor.radio.atfwd.start=true
 
 #set maximum supported adapter voltage
 PRODUCT_PROPERTY_OVERRIDES += \
