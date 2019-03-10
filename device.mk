@@ -157,7 +157,7 @@ PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
     camera.device@3.3-impl \
     libxml2 \
-    Snap
+    MGC
 
 # CNE
 PRODUCT_PACKAGES += \
